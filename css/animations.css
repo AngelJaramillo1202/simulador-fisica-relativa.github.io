@@ -1,0 +1,39 @@
+#objeto{
+animation-duration: 60s;
+animation-name: corrida;
+}
+
+.apa{
+animation-duration: 30s;
+animation-name: aparecer;
+}
+
+#nave{
+    animation-duration: 60s;
+    animation-name: corrida1;
+    }
+
+@keyframes aparecer{
+    from{
+        opacity: o;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes corrida{
+    from{
+        left: 60%; 
+     }
+     to{
+         left: 80%;
+     }
+}
+@keyframes corrida1{
+    from{
+        left: 20%; 
+     }
+     to{
+         left: 5%;
+     }
+}

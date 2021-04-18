@@ -1,0 +1,184 @@
+
+body{
+    background: url(../objetos/espacio.jpg);
+    background-size: 100%;
+}
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+#planeta{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+}
+#nave{
+    width: 20%;
+    position: absolute;
+    top: 15%;
+    left: 7%;
+}
+    
+#objeto{
+    position: absolute;
+    width: 10%;
+    top: 25%;
+    left: 79%;
+}
+#box1{
+    position: absolute;
+    width: 48%;
+    height: 25%;
+    background-color: rgba(0, 0, 0, 0.616);
+    top: 70%;
+    left: 1%;
+    right: 61%;
+    border-radius: 10px;
+    border-color: rgba(10, 10, 10, 0.699);
+    border-style: inset;
+    border-width: 5px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #fff;
+}
+#conf1{
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+}
+#conf2{
+    display: inline-block;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+#conf3{
+ display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+}
+#conf4{
+    display: inline-block;
+    position: absolute;
+    left: 80%;
+    top: 15%;
+}
+#conf5{
+    display: inline-block;
+    position: absolute;
+    left: 80%;
+    top: 53%;   
+}
+#box2{
+    position: absolute;
+    width: 48%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.616);
+    top: 70%;
+    left: 51%;
+    border-radius: 10px;
+    border-color: rgba(10, 10, 10, 0.699);
+    border-style: inset;
+    border-width: 5px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #fff;
+}
+#especifications{
+    position: absolute;
+    margin: 1%;
+    left: 1%;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+#c1{
+    display: inline-block;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+#c2{
+    display: inline-block;
+    position: absolute;
+    top: 14%;
+    left: 2%;
+}
+#c3{
+    display: inline-block;
+    position: absolute;
+    top: 32%;
+    left: 2%;
+}
+#c4{
+    display: inline-block;
+    position: absolute;
+    top: 44%;
+    left: 2%;
+}
+#c5{
+    display: inline-block;
+    position: absolute;
+    top: 62%;
+    left: 2%;
+}
+#c6{
+    display: inline-block;
+    position: absolute;
+    top: 74%;
+    left: 2%;
+}
+#c7{
+    display: inline-block;
+    position: absolute;
+    top: 86%;
+    left: 2%;
+}
+
+
+#results{
+    position:absolute;
+    width: 50%;
+    top: 60%;
+    left: 25%;
+    background-color: rgba(75, 72, 72, 0.733);
+    font-size: 200%;
+    padding-left: 10%;
+    padding-right: 0%;
+    margin: 0%;
+}
+
+.p{
+    background-color: rgba(0, 0, 0, 0.623) ;
+    border-color: rgba(0, 0, 0, 0.527);
+    border-style: inherit;
+    border-width: 20px;
+    border-radius: 5px;
+    padding: 8px;
+}
+.esp{
+    position: relative;
+    left: 9px;
+}
+.boton{
+    background-color: rgba(0, 0, 0, 0.623);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: #000000;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.5s;
+}
+.boton:hover{
+    background-color: rgba(32, 32, 32, 0.651); 
+    color: white;
+}
