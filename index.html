@@ -5,76 +5,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Fisica Relativista</title>
-    <script type="text/javascript" src="javascript/functions.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/node_modules/animejs/lib/anime.min.js"></script>
+
 </head>
 <body >
 <section>
-    <h4></h4>
+    <h4 id=""></h4>
 </section>
-    <section>
-    <div id="visual">
-<img src="objetos/nave.png" alt="nave espacial" id="nave" class="apa">
-<img src="objetos/planeta.png" alt="planeta tierra" id="planeta" class="apa">
-<img src="objetos/objeto.png" alt="objeto" id="objeto" class="apa">
-
+<section class="instrucciones ">
+    <div id="mostrar1" class="container-lg p-0 m-auto position-absolute top-50 start-50 translate-middle mostrar bg-gristenue">
+        <div class="row justify-content-center m-0 w-100">
+            <div class="col-md-12">
+                <div class=" text-center pt-2 px-5 d-flex align-items-center">
+                    <div class="col-3"></div>
+                    <h1 class="col-sm-5 text-dark fw-bold wid">INSTRUCCIONES</h1>
+                    <div class="col-2"></div>
+                    <button type="button" id = "cerrar" class="col-2 d-block btn" onclick="cerrar()"><label class="nav-link btn fs-4">Continuar</label></button>
+                </div>
+                <hr>
+            </div>
+            <div class="text-center pt-2 px-5 d-flex align-items-center">
+                <div class="col-md-6">
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <h1 class="btn boton2 w-100 fs-6 fw-bold">Una velocidad negativa como resultado significa cambio en la dirección del movimiento graficado</h1>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <h1 class="btn boton2 w-100 fs-4 fw-bold">v1 es la velocidad del evento respecto al marco 1</h1>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <h1 class="btn boton2 w-100 fs-4 fw-bold">v2 es la velocidad del evento respecto al marco 2</h1>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <h1 class="btn boton2 w-100 fs-4 fw-bold">v es la velocidad entre los marcos</h1>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class=" mx-sm-4 pt-0 px-4">
+                        <h1 class="btn boton2 w-100 fs-4 fw-bold">Favor de no repetir parametros</h1>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <h1 class="btn boton2 w-100 fw-bold"> <span class="fs-3"> Dejar el campo vacío  </span> de  la velocidad que se desee encontrar </h1>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <h1 class="btn boton2 w-100 fw-bold">Limpiar los campos llenados para habilitar el campo vacío nuevamente</h1>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 pb-5 px-4">
+                        <h1 class="btn boton2 w-100 fw-bold">Para las velocidades ingresar valores entre  <span class="fs-3"> -1 y 1 </span> </h1>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
     </div>
 </section>
-    <section id="formInstrucciones">
-        <div id="results"></div>
-<section id="box1">
-   
-<div id="conf1">
-<form name="parameters" onsubmit="return getData()">
-    <div class="p">
-    <label>Evento</label> <br>
-   <input type="radio" name="p1" value="nv"> Nave <br>
-   <input type="radio" name="p1" value="objt"> Objeto <br>
 
-    <br><label>Marco1</label> <br>
-    <input type="radio" name="p2" value="plnt"> Planeta <br>
+<section>
+<div id="visual" class="container-fluid mostrar">
+    
+    <div id="nave" class="letter text-center pb-0 pt-0">
+        
+        <span id="label3" class="text-center bg-lab pb-0 fs-2 z3"></span>
+        <img src="objetos/nave.png" alt="nave espacial"  class="w-100">
+
+    </div>
+    <div id="nave2" class="letter text-center pb-0 pt-0">
+
+        <img src="objetos/nave.png" alt="nave espacial"  class="w-100">
+        <span id="mobil" class="text-center  bg-lab text-light pb-0 fs-2"></span>
+
+    </div>
+    <div id="planeta" class=" text-center pb-0">
+    
+        <span id="label1" class="text-center fs-2 bg-lab">Marco1</span>
+        <img src="objetos/planeta.png" alt="planeta tierra"  class="w-100">
+    
+    </div> 
+    <div id="objeto" class=" text-center pb-0 pt-0">
+    
+        <span id="label3" class="text-center bg-lab fs-2 z3"></span>
+        <img src="objetos/objeto.png" alt="objeto"  class="w-100">
+    
+    </div> 
+    <div id="objeto2" class=" text-center pb-0 pt-0">
+    
+        <img src="objetos/objeto.png" alt="objeto"  class="w-100">
+        <span id="piedra" class="text-center bg-lab text-light fs-2"></span>
+    
+    </div>
 </div>
-</div>
-<div id="conf2">
-    <div class="p">
-    <label>Marco2</label><br>
-    <input  type="radio" name="p3" value="nv"> Nave <br>
-    <input  type="radio" name="p3" value="objt"> Objeto <br>
-</div>
-</div>
-<div id="conf3">
-<div class="p">
-<label>V1:</label>
-<input type="text" name="p4">C<br>
-<label>V2:</label>
-<input type="text" name="p5">C<br>
-<div class="esp">
-<label>  V:</label> 
-<input type="text" name="p6">C<br>
-</div>
-</div>
-</div>
-<div id="conf4">
-<input class="boton" type="submit" value="Calcular">
-</div>
-<div id="conf5">
-<input class="boton" type="reset" value="Reiniciar">
-</form>
+<div id="visual2" class="container-fluid mostrar">
+    
+    <div id="navex" class="letter text-center pb-0 pt-0">
+        
+        <span id="label3" class="text-center bg-lab pb-0 fs-2 z3"></span>
+        <img src="objetos/nave.png" alt="nave espacial"  class="w-100">
+
+    </div>
+    <div id="objetox" class=" text-center pb-0 pt-0">
+    
+        <span id="label3" class="text-center bg-lab fs-2 z3"></span>
+        <img src="objetos/objeto.png" alt="objeto"  class="w-100">
+    
+    </div> 
 </div>
 </section>
-<section id="box2">
-    <div class="coment">
-    <div id="c1" class="p"> Favor de no repetir parametros </div>
-    <div id="c2" class="p"> Para la velocidad que se desee encontrar escribir: ask en el campo</div>
-    <div id="c3" class="p"> Favor de ingresar valores entre -1 y 1</div>
-    <div id="c4" class="p"> La velocidad negativa significa cambio de dirección en el diagrama</div>
-    <div id="c5" class="p"> v1 es la velocidad del evento respecto al marco 1</div>
-    <div id="c6" class="p"> v2 es la velocidad del evento respecto al marco 2</div>
-    <div id="c7" class="p"> v es la velocidad entre los marcos</div>
-</div>
+<section class="controles">
+    <div id="mostrar2" class="container-fluid p-0 m-auto position-absolute top-75 start-50 translate-middle mostrar2 ">
+        
+            <div class="text-center pt-2 px-4 d-flex align-items-center ">
+                <div class="col-md-5 bg-gristenue">
+                    <form name ="parameters" onsubmit="return velocidad()">
+                    <div class="">
+                    <h1>controles</h1>
+                    </div>
+                    
+                    <div class="d-flex justify-content-center align-items-cente">
+                    <div class="col-md-4">
+                        <label class="fw-bold">Evento</label> <br>
+                        <input type="radio" name="evnt" value="nv"> Nave <br>
+                        <input type="radio" name="evnt" value="objt"> Objeto <br>
+
+                        <label class="fw-bold">Marco2</label><br>
+                        <input  type="radio" name="mrcdos" value="nv"> Nave <br>
+                        <input  type="radio" name="mrcdos" value="objt"> Objeto <br>
+                    </div>
+                    <div class="col-md-8 align-self-center">
+                        <label>V1:</label>
+                        <input type="text" id="vuno" onchange="deshabilitar2()" oninput="deshabilitar()" name="vlcuno">C<br>
+                        <label>V2:</label>
+                        <input type="text" id="vdos" onchange="deshabilitar2()" oninput="deshabilitar()" name="vlcdos">C<br>
+                        <label>  ""V:</label> 
+                        <input type="text" id="v" onchange="deshabilitar2()" oninput="deshabilitar()" name="vlc">C<br>
+                        <div class="pt-4">
+                            <input class="btn-sm boton" type="submit" id="calcu" value="CALCULAR">
+                            <input class="btn-sm boton" type="reset" value="REINICIAR" onclick="reinicio()">
+                            <a class="nav-link btn-sm fs-4 text-dark" id="abrir" onclick="abrir()">Abrir Instrucciones</a>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    </form>
+                    <hr>
+                </div>
+                <div class="col-md-1"></div>
+                <div id="verresul" class="col-md-6 bg-negropaco">
+                    <div class=" mx-sm-4 pt-2 px-4">
+                        <p id="formulav1"  class="text-light fs-3 position-absolute top-40 start-20 translate-middle">\[v_1 = \frac{v_2 + v}{1 + \frac{v_2\times{v}}{c^2}} \]</p>
+                        <p id="formulav2" class="text-light fs-3 position-relative">\[v_2 = \frac{v_1 - v}{1 - \frac{v_1\times{v}}{c^2}} \]</p>
+                    </div>
+                    <div class=" mx-sm-4 pt-2 pb-2 px-4">
+                        <h3 class="text-light" id="results"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
-</section>
-    <div id="resultados"></div>
+
+
+
 </body>
-</html>
+
+<script src="js/animaciones.js"></script>
+<script type="text/javascript" src="js/velocidad.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/javascript" src="https://www.hostmath.com/Math/MathJax.js?config=OK"></script>

@@ -1,0 +1,8 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url(../objetos/fondo.gif);
+    background-size: cover;
+
+}
