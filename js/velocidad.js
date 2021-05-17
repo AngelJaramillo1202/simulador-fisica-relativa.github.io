@@ -75,7 +75,7 @@ if ( evento === "objt") {
         resultado.innerHTML = `<h3> v1 = <span>${resul.toFixed(5)}</span></h3>`
     } if(v2 === "ask"){
         //v2
-        resul= (parseFloat(v1) + parseFloat(v))/(1 - (v1*v));
+        resul= (parseFloat(v1) - parseFloat(v))/(1 - (v1*v));
         formulav2.style.visibility = 'visible';
         formulav1.style.visibility = 'hidden';
         ver.style.visibility='visible';
@@ -96,7 +96,7 @@ if(evento === "nv"){
             resultado.innerHTML = `<h3> v1 = <span>${resul.toFixed(5)}</span></h3>`
         } if(v2 === "ask"){
             //v2
-            resul= (parseFloat(v1) + parseFloat(v))/(1 - (v1*v));
+            resul= (parseFloat(v1) - parseFloat(v))/(1 - (v1*v));
             formulav2.style.visibility = 'visible';
             formulav1.style.visibility = 'hidden';
             ver.style.visibility='visible';
